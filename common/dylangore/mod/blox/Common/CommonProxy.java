@@ -1,4 +1,4 @@
-package dylangore.mod.blox.common;
+package dylangore.mod.blox.Common;
 
 public class CommonProxy {
     public static String ITEMS_PNG = "/dylangore/textures/items.png";

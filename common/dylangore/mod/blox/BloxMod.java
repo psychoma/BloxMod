@@ -9,24 +9,24 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
-import dylangore.mod.blox.Misc.DGTab;
-import dylangore.mod.blox.ModBlocks.DGStoneBlock;
-import dylangore.mod.blox.ModBlocks.DGStoneBlock_Item;
-import dylangore.mod.blox.crafting.ColoredStone;
+import dylangore.mod.blox.Blocks.blockColoredStone;
+import dylangore.mod.blox.Blocks.blockColoredStone_Item;
+import dylangore.mod.blox.CreativeTab.bloxTab;
+import dylangore.mod.blox.Registry.GameRegistry.ColoredStone;
 
 //Mod Info
-@Mod(modid = "DGBlox", name = "DylanGore's Blox Mod", version = "1.3.1")
+@Mod(modid = "DGBlox", name = "DylanGore's Blox Mod", version = "2.0 Beta 1")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-public class DGBlox {
+public class BloxMod {
 
 	
 	//Creative Tab
-	public static CreativeTabs DGTab = new DGTab("BloxTab");
+	public static CreativeTabs bloxTab = new bloxTab("BloxTab");
 	
 	//Colored Stone Block
-	public static int DGStoneBlockId;
-	public static Block DGStoneBlock = new DGStoneBlock(DGStoneBlockId).setHardness(1.5F).setResistance(10.0F);
-	public static final String[] DGStoneBlockNames = { "White Stone",
+	public static int blockColoredStoneId;
+	public static Block blockColoredStone = new blockColoredStone(blockColoredStoneId).setHardness(1.5F).setResistance(10.0F);
+	public static final String[] blockColoredStoneNames = { "White Stone",
 		"Orange Stone", "Magenta Stone", "Light Blue Stone",
 		"Yellow Stone", "Lime", "Pink Stone",
 		"Dark Gray Stone", "Light Gray Stone", "Cyan Stone",
@@ -38,11 +38,11 @@ public class DGBlox {
 		// Config File
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
-			int DGStoneBlockId = config.getBlock("Colored Stone", 1000).getInt(1000);
+			int blockColoredStoneId = config.getBlock("Colored Stone", 1000).getInt(1000);
 		config.save();
 
 		//Console Print
-		System.out.println("DylanGore's Colored Blox Mod has been loaded");
+		System.out.println("Colored Blox Mod has been loaded");
 	}
 	
 	@Mod.Init
@@ -63,7 +63,7 @@ public class DGBlox {
 
 	private void regBlocks() {
 		//Colored Stone
-		GameRegistry.registerBlock(DGStoneBlock, DGStoneBlock_Item.class,
+		GameRegistry.registerBlock(blockColoredStone, blockColoredStone_Item.class,
 				"DG_Stone");
 	}
 }

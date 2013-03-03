@@ -1,4 +1,4 @@
-package dylangore.mod.blox.ModBlocks;
+package dylangore.mod.blox.Blocks;
 
 import java.util.List;
 
@@ -8,18 +8,14 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import dylangore.mod.blox.DGBlox;
-import dylangore.mod.blox.common.CommonProxy;
+import dylangore.mod.blox.BloxMod;
+import dylangore.mod.blox.Common.CommonProxy;
 
-
-
-
-public class DGStoneBlock extends Block {
-	public static boolean BloxTabEnabled = true;
-	public DGStoneBlock (int id) {
+public class blockColoredStone extends Block {
+	public blockColoredStone (int id) {
 		super(id, Material.rock);
 		setBlockName("ColoredStone");
-		setCreativeTab(DGBlox.DGTab);
+		setCreativeTab(BloxMod.bloxTab);
 		
 	}
 	

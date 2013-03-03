@@ -1,9 +1,9 @@
-package dylangore.mod.blox.ModBlocks;
+package dylangore.mod.blox.Blocks;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class DGStoneBlock_Item extends ItemBlock {
+public class blockColoredStone_Item extends ItemBlock {
 	
 	private final static String[] subNames = {
 		"white", "orange",  "magenta", "lightBlue", "yellow", "lightGreen",
@@ -11,7 +11,7 @@ public class DGStoneBlock_Item extends ItemBlock {
 		"green", "red", "black"
 	};
 
-	public DGStoneBlock_Item(int id) {
+	public blockColoredStone_Item(int id) {
 		super(id);
 		setHasSubtypes(true);
 		setItemName("DGStoneBlock_Item");
