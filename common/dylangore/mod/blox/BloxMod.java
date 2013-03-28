@@ -64,6 +64,6 @@ public class BloxMod {
 	private void regBlocks() {
 		//Colored Stone
 		GameRegistry.registerBlock(blockColoredStone, blockColoredStone_Item.class,
-				"DG_Stone");
+				"Colored_Stone");
 	}
 }
